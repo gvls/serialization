@@ -7,6 +7,11 @@
 // 有protobuf2和protobuf3，pb3比pb2更简化，主流是pb3
 syntax = "proto3";
 
+// 导入xxx.proto
+// 使用的使用要带上路径，/替换成.
+// 内置的包：github.com/golang/protobuf/ptypes/ 。在代码中要导入该链接
+import "路径/xxx.proto";
+
 // 指定Go的包名，包名同时也是一个目录
 option go_package = "当前相对路径/包名";
 
