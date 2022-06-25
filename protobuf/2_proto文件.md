@@ -3,6 +3,9 @@
 // 版本
 syntax = "proto3";
 
+// 指定Go的包名
+option go_package = ".;包名";
+
 // 额外的语法，属于grpc不属于protobuf，用于生成stub
 // 在运行 protoc 时要添加 plugins=grpc
 service 服务名 {
