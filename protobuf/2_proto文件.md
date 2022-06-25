@@ -1,11 +1,14 @@
 ##  proto文件
 下面的 服务名、结构体名、字段名 在生成go代码时候自动大写开头
+[官方文档](https://developers.google.com/protocol-buffers/docs/proto3) 
+
 ```proto
 // 版本
+// 有protobuf2和protobuf3，pb3比pb2更简化，主流是pb3
 syntax = "proto3";
 
-// 指定Go的包名
-option go_package = ".;包名";
+// 指定Go的包名，包名同时也是一个目录
+option go_package = "当前相对路径/包名";
 
 // 额外的语法，属于grpc不属于protobuf，用于生成stub
 // 在运行 protoc 时要添加 plugins=grpc
